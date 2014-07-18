@@ -17,13 +17,37 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    
+//    NSLog(@"hello world");
+    
+	int x=5;
+    int y=20;
+    int z=-2;
+    //operators include + 0 * /
+ // NSLog(@"the value of s is: %i the valude of y is %i and the value of z is: %i",x,y,z);
+    int additionAnswer=x+y;
+    int MultiplicationAnswer=y*z;
+    
+    float heightOfEverstBaseCamp=16900.3;
+    float heightOfEverst=29029;
+    float distanceToTravel=heightOfEverst-heightOfEverstBaseCamp;
+    distanceToTravel=distanceToTravel-1000;
+    
+//    int int=5; 
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    NSLog(@"didRecieveMemoryWarning method is evaluating");
 }
 
+- (IBAction)convertUnits:(UIButton *)sender
+{
+    float numberOfBills=[self.numberOfBillsTextField.text floatValue];
+    float numberOfFootballFields=numberOfBills/91440;
+    self.numberOfBillsLabel.text=[NSString stringWithFormat:@"%f", numberOfFootballFields];
+}
 @end
